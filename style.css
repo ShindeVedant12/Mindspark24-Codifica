@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+.main{
+    overflow-y: visible;
+    margin-top: 500px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo img{
+    position: relative;
+    z-index: 1;
+    height: 18vh;
+    margin-top: 10vh;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+}
+.heading img{
+    height: 8vh;
+
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-top: 10vh;
+}
+
+.sec{
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    margin-top: 10vh;
+}
+
+.cards {
+    height: 450px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: aliceblue;
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.3rem;
+}
+
+.cards:hover {
+    box-shadow: 0 3px 50px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05) rotate(0deg);
+    /* animation: pulse 1.5s 1; */
+}
+
+.cards::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    transition: opacity 0.3s;
+    opacity: 0;
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+
+.cards:hover::before {
+    opacity: 1;
+    animation: shimmer 1.5s 1;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translate(-70%, -70%) rotate(50deg);
+    }
+    100% {
+        transform: translate(70%, 70%) rotate(50deg);
+    }
+}
+
+.cards span{
+    display: flex;
+    margin-left: 25px;
+}
+
+.cards img{
+    height: 120px;
+}
+
